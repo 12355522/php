@@ -41,10 +41,14 @@ class Gcm {
         //include_once __DIR__ . '/../../include/config.php';
  
         // Set POST variables
+        //below url is for GCM
         $url = 'https://gcm-http.googleapis.com/gcm/send';
         
+        //below url is for FCM
+        //$url = 'https://fcm.googleapis.com/fcm/send';
+        
         $headers = array(
-            'Authorization: key=' . GOOGLE_API_KEY,
+            'Authorization: key= AIzaSyZ-1u...0GBYzPu7Udno5aA' ,
             'Content-Type: application/json'
         );
         // Open connection
@@ -73,6 +77,13 @@ class Gcm {
  
         return $result;
     }
+    
+    /*
+    
+    sending push...
+     $msg = new Gcm();
+     $msg->send('fcm or gcm id ','message text');
+    */
  
 }
  
